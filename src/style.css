@@ -3,6 +3,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Prevent font size inflation */
@@ -74,3 +76,72 @@ textarea:not([rows]) {
 
 /* CUSTOM CSS HERE */
 
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .container * {
+  border: 1px solid black;
+} */
+
+.container {
+  border: 1px solid black;
+  width: 35vw;
+  height: 25vh;
+  padding: 2%;
+  border-radius: 20px;
+  background: rgb(82,126,147);
+  background: linear-gradient(180deg, rgba(82,126,147,1) 0%, rgba(88,163,198,1) 35%, rgba(0,191,255,1) 100%);
+
+  display: flex;
+  flex-direction: column;
+  min-width: 550px;
+  min-height: 250px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+}
+
+.current, .forecast {
+  flex: 1;  
+}
+
+.current {
+  display: grid;
+  grid-template-columns: 1fr 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.currentIcon {
+  grid-area: 1 / 1 / 4 / 2;  
+}
+
+.imgIcon {
+  object-fit: contain;
+  width: 100%;
+  min-width: 88px;
+}
+
+.currentTemp {
+  grid-area: 1 / 2 /4 / 3;
+  font-size: 4rem;
+}
+
+.currentIcon, .currentTemp {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.currentCity {
+  grid-area: 1 / 3 / 2 / 4;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.3em;
+  font-weight: 300;
+}

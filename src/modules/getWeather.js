@@ -4,8 +4,10 @@ export default async function getWeather(city) {
   console.log(object);
   const currentData = { 
     currentWeatherText: object.current.condition.text, 
+    currentIcon: object.current.condition.icon,
     currentWeatherTemp: object.current.temp_c, 
     currentFeelsLike: object.current.feelslike_c,
+    currentIsDay: object.current.is_day,
     currentLocation: object.location.name,
   };
   const forecastData = {};
