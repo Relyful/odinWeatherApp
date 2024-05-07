@@ -1,5 +1,5 @@
 import getWeather from "./getWeather";
-import { updateIcon, updateTemp, updateLocation } from "./drawIcon";
+import { updateIcon, updateTemp, updateLocation } from "./drawData";
 
 const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 

@@ -1,5 +1,5 @@
 import './style.css';
-import getWeatherData from './modules/getData';
+import getWeatherData from './modules/workData';
 
 const input = document.querySelector('#city');
 

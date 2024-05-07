@@ -91,7 +91,7 @@ body {
 
 .container {
   border: 1px solid black;
-  width: 35vw;
+  max-width: 30vw;
   height: 25vh;
   padding: 2%;
   border-radius: 20px;
@@ -100,7 +100,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  min-width: 550px;
+  min-width: 600px;
   min-height: 250px;
   font-family: "Kanit", sans-serif;
   font-weight: 300;
@@ -144,4 +144,11 @@ body {
   justify-content: flex-end;
   font-size: 1.3em;
   font-weight: 300;
+}
+
+.currentText {
+  grid-area: 2 / 3 / 3 / 4;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.2em;
 }
