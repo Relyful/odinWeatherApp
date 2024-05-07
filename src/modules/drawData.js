@@ -1,6 +1,7 @@
 const currentIcon = document.querySelector('.currentIcon');
 const currentTemp = document.querySelector('.currentTemp');
 const currentLocation = document.querySelector('.currentCity');
+const currentText = document.querySelector('.currentText');
 
 
 function updateIcon(dataObject) {
@@ -20,4 +21,8 @@ function updateLocation(dataObject) {
   currentLocation.innerText = dataObject.currentLocation;
 }
 
-export { updateIcon, updateTemp, updateLocation };
+function updateText(dataObject) {
+  currentText.innerText = dataObject.currentWeatherText;
+}
+
+export { updateIcon, updateTemp, updateLocation, updateText };

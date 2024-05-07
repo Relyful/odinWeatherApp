@@ -1,5 +1,5 @@
 import getWeather from "./getWeather";
-import { updateIcon, updateTemp, updateLocation } from "./drawData";
+import { updateIcon, updateTemp, updateLocation, updateText } from "./drawData";
 
 const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -12,6 +12,7 @@ export default async function getWeatherData(city) {
     updateIcon(weatherData.currentData);
     updateTemp(weatherData.currentData);
     updateLocation(weatherData.currentData);
+    updateText(weatherData.currentData);
   } catch (error) {
     console.log(error);
   }  
