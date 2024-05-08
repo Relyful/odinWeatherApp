@@ -87,6 +87,24 @@ body {
   font-weight: 300;
 }
 
+#city {
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+
+#getWeather {
+  margin-left: 10px;
+  padding: 5px;
+  background: none;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#getWeather:hover {
+  box-shadow: 0 0 11px rgba(37, 137, 204, 0.541);
+}
+
 .container {
   border: 1px solid black;
   padding: 2%;
@@ -100,6 +118,7 @@ body {
   max-width: 30vw;
   min-width: 600px;
   min-height: 250px;  
+  margin: 20px;
 }
 
 .current, .forecast {
