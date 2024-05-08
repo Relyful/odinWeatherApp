@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-cycle
 import getWeather from "./getWeather";
 import { updateIcon, updateTemp, updateLocation, updateText, updateForecastDay } from "./drawData";
 
@@ -7,8 +8,6 @@ export default async function getWeatherData(city) {
   try {
     const weatherData = await getWeather(city);
     console.log(weatherData);
-    const dateShizzle = new Date(weatherData.forecastData.day0.date);
-    console.log(dayNames[dateShizzle.getDay()]);
     updateIcon(weatherData.currentData);
     updateTemp(weatherData.currentData);
     updateLocation(weatherData.currentData);

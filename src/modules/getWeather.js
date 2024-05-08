@@ -1,9 +1,12 @@
 // eslint-disable-next-line import/no-cycle
 import { currentUnit , currentLocation } from "./changeUnit";
+import { displayLoading, hideLoading } from "./loading";
 
 export default async function getWeather(city) {
+  displayLoading();
   const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?days=3&key=9ebd06ffaada483cb89191451242404&q=${city}`, { mode: 'cors' });
   const object = await response.json();
+  hideLoading();
   console.log(object);
 
   let currentTemp = 'celsius';

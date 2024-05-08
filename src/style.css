@@ -83,11 +83,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
 }
-
-/* .container * {
-  border: 1px solid black;
-} */
 
 .container {
   border: 1px solid black;
@@ -101,9 +99,7 @@ body {
   height: 25vh;
   max-width: 30vw;
   min-width: 600px;
-  min-height: 250px;
-  font-family: "Kanit", sans-serif;
-  font-weight: 300;
+  min-height: 250px;  
 }
 
 .current, .forecast {
@@ -180,7 +176,7 @@ body {
   width: 15%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 3fr;
+  grid-template-rows: 1fr 1fr 2.8fr;
 }
 
 .forecastTemp {
@@ -201,4 +197,28 @@ body {
 .forecastIcon {
   display: flex;
   justify-content: center;
+}
+
+.loading {
+  position: absolute;
+  width: 8vw;
+  height: 10vh;
+  visibility: hidden;
+  animation: spin 1s infinite linear;
+  background-image: url(./img/loading.webp);
+  background-size: cover;
+  left: 45vw;
+}
+
+.loading.display {
+  visibility: visible;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
