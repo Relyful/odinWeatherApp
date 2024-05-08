@@ -15,9 +15,6 @@ export default async function getWeather(city) {
   } else {
     const object = await response.json();
     hideLoading();
-
-    console.log(object);
-
     let currentTemp = 'celsius';
     currentLocation.current = city;
 

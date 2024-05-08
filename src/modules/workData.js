@@ -5,7 +5,6 @@ import { updateIcon, updateTemp, updateLocation, updateText, updateForecastDay, 
 export default async function getWeatherData(city) {
   try {
     const weatherData = await getWeather(city);
-    console.log(weatherData);
     updateIcon(weatherData.currentData);
     updateTemp(weatherData.currentData);
     updateLocation(weatherData.currentData);
