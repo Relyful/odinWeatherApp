@@ -2,8 +2,6 @@
 import getWeather from "./getWeather";
 import { updateIcon, updateTemp, updateLocation, updateText, updateForecastDay } from "./drawData";
 
-const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
 export default async function getWeatherData(city) {
   try {
     const weatherData = await getWeather(city);
