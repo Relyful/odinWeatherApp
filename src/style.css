@@ -214,6 +214,14 @@ body {
   visibility: visible;
 }
 
+.errorMsg {
+  visibility: hidden;
+}
+
+.errorMsg.display {
+  visibility: visible;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);

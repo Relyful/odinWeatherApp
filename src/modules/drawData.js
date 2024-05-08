@@ -5,6 +5,7 @@ const currentText = document.querySelector('.currentText');
 const first = document.querySelector('.first');
 const second = document.querySelector('.second');
 const third = document.querySelector('.third');
+const errorDiv = document.querySelector('.errorMsg');
 
 const dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
@@ -59,5 +60,14 @@ function updateForecastDay(dataObject) {
   third.children[2].appendChild(imageStatus);
 }
 
+function drawError(errorMsg) {
+  errorDiv.innerText = errorMsg;
+  errorDiv.classList.add('display');
+  setTimeout(() => {
+    errorDiv.classList.remove('display');
+    errorDiv.innerText = '';
+  }, 5000);
+}
 
-export { updateIcon, updateTemp, updateLocation, updateText, updateForecastDay };
+
+export { updateIcon, updateTemp, updateLocation, updateText, updateForecastDay, drawError };
