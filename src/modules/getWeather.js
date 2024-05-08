@@ -8,15 +8,17 @@ export default async function getWeather(city) {
     `https://api.weatherapi.com/v1/forecast.json?days=3&key=9ebd06ffaada483cb89191451242404&q=${city}`,
     { mode: 'cors' },
   );
+  console.log(response);
+  currentLocation.current = city;
   if (!response.ok) {
     const errorObject = await response.json();
     hideLoading();
     throw new Error(errorObject.error.message);    
   } else {
     const object = await response.json();
+    console.log(object);
     hideLoading();
-    let currentTemp = 'celsius';
-    currentLocation.current = city;
+    let currentTemp = 'celsius';    
 
     if (currentUnit.current === 'celsius') {
       currentTemp = object.current.temp_c;

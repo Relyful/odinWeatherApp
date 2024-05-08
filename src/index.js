@@ -8,18 +8,22 @@ const form = document.querySelector('#query');
 const fahrenheit = document.querySelector('.fahrenheit');
 
 function submit() {
-  getWeatherData(input.value);
   currentLocation.current = input.value;
+  getWeatherData(currentLocation.current);  
   form.reset();
 }
 
-getWeatherData('Bratislava');
 button.addEventListener('click', submit);
+
 input.addEventListener('keypress', (event) => {
   if (event.keyCode === 13) {
-    submit();
+    event.preventDefault();
+    currentLocation.current = input.value;
+    getWeatherData(currentLocation.current);  
+    form.reset();
   }
 })
 
+getWeatherData('Bratislava');
 fahrenheit.classList.add('idleUnit');
 unitChangeUI();
